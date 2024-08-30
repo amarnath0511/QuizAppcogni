@@ -105,3 +105,22 @@ body{
   font-size: 34px;
   text-align: center;  
 }
+.correct{
+  /* padding: 5px 10px; */
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  background: #64be64;
+  color: #fff;
+}
+.worng{
+  /* padding: 5px 10px; */
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  background: #be6464;
+  color: #fff;
+}
+.nopadding{
+  /* padding: 5px 10px; */
+}

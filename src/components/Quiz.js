@@ -6,6 +6,13 @@ function Quiz() {
     const [score,setScore] = useState(0);
     const [clickedOption,setClickedOption]=useState(0);
     const [showResult,setShowResult]=useState(false);
+    const [statusResult,setStatusResult]=useState(false);
+
+    useEffect(() => {
+        if(clickedOption !== 0){
+        clickedOption== QuestionData[currentQuestion].answer ? setStatusResult("Correct Answer") : setStatusResult("Worng Answer");
+        }
+      }, [clickedOption]);
     // const [isDisabled, setDisabled] = useState();
     
     const changeQuestion = ()=>{
@@ -38,6 +45,9 @@ function Quiz() {
                 <QuizResult score={score} totalScore={QuestionData.length} tryAgain={resetAll}/>
             ):(
             <>
+              <span className={`nopadding ${
+                               clickedOption== QuestionData[currentQuestion].answer ?  "correct" : "worng"
+                            }`}>{statusResult}</span>
             <div className="question">
                 <span id="question-number">{currentQuestion+1}. </span>
                 <span id="question-txt">{QuestionData[currentQuestion].question}</span>
