@@ -73,13 +73,18 @@ body{
 }
 
 .checked{
-  background-color: rgb(19, 22, 212);
+  background-color: green;
   color:white;
   /* box-shadow: 3px 3px 4px 1px rgb(78, 69, 78); */
 }
-.option-btn:hover{
-  background-color: rgb(19, 22, 212);
+.noncorrect{
+  background-color: red;
   color:white;
+}
+.option-btn:hover{
+  /* background-color: rgb(19, 22, 212); */
+  /* color:white; */
+  cursor: pointer;
 }
 #next-button{
   padding:10px;
